@@ -1,0 +1,43 @@
+<% include _header %>
+    <% if ((currentUser) && (currentUser.id === user.id)) { %>
+        <a href="/edit" class="btn btn-primary pull-right">Edit your profile</a>
+    <% } %>
+    <h1><%= user.name() %></h1>
+    <h2>Joined on <%= user.createdAt %></h2>
+    <%= user.Avatar %>
+    <% if (user.Age) { %>
+        <p>
+            Age:  <%= user.Age %>
+        </p>
+    <% } %>
+    <% if (user.Sexual) { %>
+        <p>
+            Sexual:  <%= user.Sexual %>
+        </p>
+    <% } %>
+    <% if (user.Job) { %>
+        <p>
+            Job:  <%= user.Job %>
+        </p>
+    <% } %>
+    <% if (user.Company) { %>
+        <p>
+            Company:  <%= user.Company %>
+        </p>
+    <% } %>
+    <% if (user.Address) { %>
+        <p>
+            Address:  <%= user.Address %>
+        </p>
+    <% } %>
+    <% if (user.Email) { %>
+        <p>
+            Email:  <%= user.Email %>
+        </p>
+    <% } %>
+    <% if (user.bio) { %>
+        <p>
+            Bio:  <%= user.bio %>
+        </p>
+    <% } %>
+<% include _footer %>

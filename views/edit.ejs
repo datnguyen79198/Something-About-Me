@@ -1,0 +1,17 @@
+<% include _header %>
+
+    <h1>Edit your profile</h1>
+
+    <form action="/edit" method="post">
+        <input name="displayname" type="text" class="form-control" placeholder="Display name" value="<%= currentUser.displayName%>">
+        <input name="Sexual" type="text" class="form-control" placeholder="Your Sexual" value="<%= currentUser.Sexual%>">
+        <input name="Age" type="number" class="form-control" placeholder="Your Age" value="<%= currentUser.Age%>">
+        <input name="Email" type="text" class="form-control" placeholder="Your Email" value="<%= currentUser.Email%>">
+        <input name="Address" type="text" class="form-control" placeholder="Your Address" value="<%= currentUser.Address %>">
+        <input name="Job" type="text" class="form-control" placeholder="Your Job" value="<%= currentUser.Job %>">
+        <input name="Company" type="text" class="form-control" placeholder="Your Company now" value="<%= currentUser.Company %>">
+        <textarea name="bio" class="form-control" placeholder="Tell us about yourself!"><%= currentUser.bio || "" %></textarea>
+        <input type="submit" value="Update" class="btn btn-primary btn-block">
+    </form>
+
+<% include _footer %>
